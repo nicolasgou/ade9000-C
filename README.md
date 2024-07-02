@@ -7,11 +7,24 @@
 
 ![analogDevice_C_ade9000](https://github.com/nicolasgou/ade9000-C/assets/45576249/b94bdc01-6026-456f-ad56-552b0f142273)
 
+# 0 - About ADE9000
 
+The ADE9000 is a highly accurate, fully integrated, multiphase energy and power quality monitoring device. Superior analog performance and a digital signal processing (DSP) core enable accurate energy monitoring over a wide dynamic range. An integrated high end reference ensures low drift over temperature with a combined drift of less than ±25 ppm/°C maximum for the entire channel including a programmable gain amplifier (PGA) and an analog-to-digital converter (ADC).
+
+Applications:
+
+- Energy and power monitoring
+- Power quality monitoring
+- Protective devices
+- Machine health
+- Smart power distribution units
+- Polyphase energy meters
+
+**More Information: [http://www.analog.com](https://www.analog.com/en/products/ade9000.html)**
 
 # 1 - Introduction
 
-Analog Device ade9000 IC platform independent driver written in C programming language. This repository contains the sensor driver files (.h and .c) to be included, or linked directly as a git submodule, in your project. The driver is MISRA compliant and the documentation can be generated using the [Doxygen](http://www.doxygen.org/) tool.
+This repo intend to be a platform independent driver written in C programming language for the ADE9000 IC . This repository contains the sensor driver files (.h and .c) to be included, or linked directly as a git submodule, in your project. The driver is MISRA compliant and the documentation can be generated using the [Doxygen](http://www.doxygen.org/) tool.
 
 In order to `clone` the complete content of the repository folder, use the command:
 
@@ -65,5 +78,5 @@ Some integration examples can be found [here](https://github.com/STMicroelectron
 
 ------
 
-**More Information: [http://www.analog.com](https://www.analog.com/en/products/ade9000.html)**
+
 
