@@ -213,10 +213,13 @@ ADE90xx_ReadReg16(ADE90xx_Handler_t *ADE_Handler, uint16_t Reg, uint16_t MASK, u
 #ifdef ADE90xx_SAVE_DATA_VALUE
 #if ADE90xx_SAVE_DATA_VALUE == 1
   if (Data) *Data = retval & MASK; else return retval & MASK;
-#else
-  if (Data) *Data = (retval & MASK) | ((~MASK) & (*Data)); else return (retval & MASK);
+#else //ADE90xx_SAVE_DATA_VALUE == 0
+  if (Data) //Data == tRUE
+    *Data = (retval & MASK) | ((~MASK) & (*Data)); 
+  else //Data == NULL
+    return (retval & MASK);
 #endif
-#else
+#else //ADE90xx_SAVE_DATA_VALUE => Not Defined
   if (Data) *Data = (retval & MASK) | ((~MASK) & (*Data)); else return (retval & MASK);
 #endif
   return *Data;
